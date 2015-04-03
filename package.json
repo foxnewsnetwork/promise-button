@@ -1,7 +1,7 @@
 {
   "name": "promise-button",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "Yet another stateful button implementation for emberjs",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -33,10 +33,14 @@
     "ember-disable-prototype-extensions": "^1.0.0"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "stateful",
+    "button",
+    "promise"
   ],
   "dependencies": {
-    "ember-cli-babel": "^4.0.0"
+    "ember-cli-babel": "^4.0.0",
+    "ember-cli-coffeescript": "^0.10.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

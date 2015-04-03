@@ -1,6 +1,17 @@
 # Promise-button
 
-This README outlines the details of collaborating on this Ember addon.
+Another implementation of a promise-aware component for emberjs
+
+Use it like so:
+
+```handlebars
+{{#promise-button promise=myPromise loadingText="loading"}}
+  submit will to allah
+{{/promise-button}}
+```
+This will create a button which, when myPromise is pending, become disabled.
+
+By the way, this may seem obvious, but you MUST pass a promise to the promise button
 
 ## Installation
 
