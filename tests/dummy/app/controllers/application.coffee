@@ -3,6 +3,6 @@
 ApplicationController = Ember.Controller.extend
   actions:
     toggle: ->
-      @set "model", new Ember.RSVP.Promise (resolve) -> setTimeout resolve, 500
+      @get("model").save()
 
 `export default ApplicationController`

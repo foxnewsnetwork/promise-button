@@ -1,6 +1,6 @@
 {
   "name": "promise-button",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Yet another stateful button implementation for emberjs",
   "directories": {
     "doc": "doc",

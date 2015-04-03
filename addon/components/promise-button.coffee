@@ -9,7 +9,7 @@ PromiseButtonComponent = Ember.Component.extend
   loadingText: "loading"
   disabled: Ember.computed.alias("isPending")
   isLoading: Ember.computed.alias("isPending")
-  isPending: Ember.computed.alias("promise.isPending")
+  isPending: Ember.computed.or("promise.isPending", "promise.isSaving")
   isFulfilled: Ember.computed.alias("promise.isFulfilled")
   isSettled: Ember.computed.alias("promise.isSettled")
   isRejected: Ember.computed.alias("promise.isRejected")
