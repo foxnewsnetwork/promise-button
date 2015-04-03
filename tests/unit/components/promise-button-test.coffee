@@ -11,7 +11,7 @@ test 'it renders', (assert) ->
 
   # creates the component instance
   component = @subject 
-    promise: new Ember.RSVP.Promise (resolve) -> resolve()
+    model: new Ember.RSVP.Promise (resolve) -> resolve()
   assert.equal component._state, 'preRender'
 
   # renders the component to the page
@@ -26,7 +26,7 @@ test 'it should change state based on its model', (assert) ->
   promise = new Ember.RSVP.Promise (resolve) -> 
     window.setTimeout resolve, 50
   component = @subject()
-  component.set "promise", promise
+  component.set "model", promise
   Ember.run =>
     @render()
     assert.equal component.get("isLoading"), true
