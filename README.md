@@ -3,15 +3,22 @@
 Another implementation of a promise-aware component for emberjs
 
 Use it like so:
+```coffee
+MyRoute = Ember.Route.extend
+  model: -> @store.find "post", 55
+
+MyController = Ember.Controller.extend
+  post: Ember.computed.alias("model")
+```
 
 ```handlebars
-{{#promise-button promise=myPromise loadingText="loading"}}
+{{#promise-button model=post loadingText="loading"}}
   submit will to allah
 {{/promise-button}}
 ```
-This will create a button which, when myPromise is pending, become disabled.
+This will create a button which, when post is pending or saving, become disabled.
 
-By the way, this may seem obvious, but you MUST pass a promise to the promise button
+By the way, this may seem obvious, but you MUST pass a promise or a DS.Model to the promise button
 
 ## Installation
 
